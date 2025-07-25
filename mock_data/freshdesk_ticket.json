@@ -1,0 +1,7 @@
+{
+  "subject": "Deploy payment service v3.2.1",
+  "description": "Release build PROD deployment scheduled for Friday",
+  "priority": "High",
+  "requested_by": "DevOps Team",
+  "environment": "PROD"
+}
