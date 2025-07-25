@@ -1,18 +1,18 @@
 import streamlit as st
 import json
-st.set_page_config(page_title="Project Delta - CR Generator", layout="centere")
+
+st.set_page_config(page_title="Project Delta - CR Generator", layout="centered")
 
 st.title("🚀 Project Delta")
 st.subheader("Auto-Generate Change Request from Ticket")
 
-# Input Ticker JSON
+# Input ticket JSON
 ticket_input = st.text_area("📩 Paste Ticket JSON (from Freshdesk/Jira)", height=250)
 
 if st.button("Generate CR"):
-  if not ticket_input:
-    st.warning("Please paste a ticker first")
-
-  else:
+    if not ticket_input:
+        st.warning("Please paste a ticket first.")
+    else:
         try:
             # Try parsing the JSON
             ticket = json.loads(ticket_input)
@@ -32,3 +32,4 @@ if st.button("Generate CR"):
 
         except Exception as e:
             st.error(f"❌ Invalid JSON: {e}")
+
